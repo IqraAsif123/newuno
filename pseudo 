@@ -1,0 +1,83 @@
+
+GAME_MANAGER( deal )
+
+array of @cards
+deal each @player 7 cards 
+and return new array with left over cards
+(the array that is returned is (drawpile))
+
+
+
+
+GAME
+.shuffel 
+it should shuffel the @cards when game starts 
+it also shuffle the cards when new deck is introduced from discard to drawpile
+
+
+drawpile
+each player will pick one card while playing game 
+will use (.pop) method
+when the (drawpile) has no cards it should take cards from (discardpile) and shuffel them 
+
+discardpile
+players will discard one card 
+for that there will be class (hand)
+hand will recive cards from @GAME_MANAGER when game starts
+hands should pick one card from drawpile and
+when players discard one card it will remove 1 cards from hand
+
+MATCH
+if the card on discardpile matched to the card in the player hand they will discard it else its a choice 
+
+
+TURN 
+give 1 card to player hands
+
+DECK 
+introduce the cards
+wilds constant
+actions constant
+color of cards constant
+
+1# method for action card(color and actions) , wilds(colors and wilds) and simple card with (value and color)
+2# get 3 arrays for cards (action,simple,wilds)
+3# all the arrays of cards should be in one array (@cards)
+
+action_card
+card.new(colors,actions)
+apply code for applying colors to action_cards
+using .flat_map method to get one array instead of nested array 
+
+same for other cards 
+
+once all the 3 arrays are added to make one new array assign it to (variable) to use it in class @game 
+
+
+
+
+CARDS 
+define a single card 
+each card has (value,score and color)
+give each card their points to use in scoring
+
+
+
+PLAYERS 
+players are array 
+introduce how many players will play
+player will pick one card in each turn (must)
+player have to decide if they want to discard a  card or not
+pulling card from drawpile is necassory 
+
+
+GAME_END
+ know when the game is over
+when any of the players has 1 card in hands
+should say "uno"
+iteration for @player if the their hand has 1 card 
+
+
+SCORING
+calculation for cards 
+in class @card give each card the values and use it for scoring 
